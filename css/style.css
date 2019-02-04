@@ -1,9 +1,59 @@
+/*Global styles*/
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
-main {
+body {
     display: grid;
-    grid-template-columns: 
+    min-width: 300px;
+    grid-template-columns: minmax(200px, auto) 1fr;
+    grid-template-areas: "navbar mainContent";
+    grid-gap: 20px; 
+    font-family: sans-serif;  
+}
+header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+/*Navigation*/
+#navbar {
+    grid-area: navbar;
+    position: fixed; 
+}
+#navbar a {
+    display: block;
+    border: 1px solid black;
+    padding: 5px;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    text-align: left;
+    width: 100%;
+}
+/*Content*/
+#main-doc {
+    grid-area: mainContent;
+    position: absolute;
+    margin-left:310px;
+    padding:60px 0 0 70px;
+    margin-bottom:110px;
+}
+section li {
+    margin:15px 0px 0px 20px;
+}
+    
+
+/*Code blocks*/
+code {
+    display: block;
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2px;        
+    margin:10px;
+    border-radius:5px;
 }
